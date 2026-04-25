@@ -1,14 +1,12 @@
 def main():
-    try:
-        
+    try:        
         username = input("Enter username: ")
         age = int(input("Enter age: "))
-
     
         if username.strip() == "":
             raise ValueError("Username cannot be empty.")
         if age <= 0:
-            raise ValueError("Age must be a positive number.")
+            raise ValueError("Age must only be a positive number.")
 
         
         with open("users.txt", "a") as file:
@@ -33,7 +31,5 @@ def main():
 
         
         print("System complete.")
-
-
 
 main()
